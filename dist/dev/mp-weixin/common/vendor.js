@@ -7517,6 +7517,7 @@ exports.createSSRApp = createSSRApp;
 exports.defineComponent = defineComponent;
 exports.defineStore = defineStore;
 exports.e = e;
+exports.index = index;
 exports.o = o;
 exports.onHide = onHide;
 exports.onLaunch = onLaunch;

@@ -1,5 +1,6 @@
 import { createSSRApp } from 'vue'
 import pinia from './stores'
+import './utils/http.ts'
 
 import App from './App.vue'
 export function createApp() {
@@ -7,6 +8,6 @@ export function createApp() {
 
   app.use(pinia)
   return {
-    app,
+    app
   }
 }

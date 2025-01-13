@@ -6,17 +6,23 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   __name: "my",
   setup(__props) {
     const memberStore = stores_modules_member.useMemberStore();
+    const request = () => {
+      common_vendor.index.request({
+        method: "GET",
+        url: "/home/banner"
+        // 需要凭借完整地址
+      });
+    };
     return (_ctx, _cache) => {
       return {
         a: common_vendor.t(common_vendor.unref(memberStore).profile),
-        b: common_vendor.o(($event) => common_vendor.unref(memberStore).setProfile({
-          nickname: "黑马先锋"
-        })),
-        c: common_vendor.o(($event) => common_vendor.unref(memberStore).clearProfile())
+        b: common_vendor.o(($event) => common_vendor.unref(memberStore).setProfile("hahah")),
+        c: common_vendor.o(($event) => common_vendor.unref(memberStore).clearProfile()),
+        d: common_vendor.o(($event) => request())
       };
     };
   }
 });
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/dzy/look-for-work/uniapp/my-project/src/pages/my/my.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/dzy/look-for-work/uniapp/git-uniapp/src/pages/my/my.vue"]]);
 wx.createPage(MiniProgramPage);
 //# sourceMappingURL=my.js.map

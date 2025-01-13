@@ -94,6 +94,6 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     v: $props.isShadow ? $props.shadow : ""
   });
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/dzy/look-for-work/uniapp/my-project/node_modules/@dcloudio/uni-ui/lib/uni-card/uni-card.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/dzy/look-for-work/uniapp/git-uniapp/node_modules/@dcloudio/uni-ui/lib/uni-card/uni-card.vue"]]);
 wx.createComponent(Component);
 //# sourceMappingURL=uni-card.js.map

@@ -1,1 +1,1 @@
-<view class="index">index</view><uni-card wx:if="{{a}}" u-s="{{['d']}}" u-i="07007106-0" bind:__l="__l" u-p="{{a}}"><text>这是一个带头像和双标题的基础卡片，此示例展示了一个完整的卡片。</text></uni-card>
+<view class="index">index</view><uni-card wx:if="{{a}}" u-s="{{['d']}}" u-i="1767299a-0" bind:__l="__l" u-p="{{a}}"><text>这是一个带头像和双标题的基础卡片，此示例展示了一个完整的卡片。</text></uni-card>
