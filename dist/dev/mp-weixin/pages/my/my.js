@@ -16,7 +16,10 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     return (_ctx, _cache) => {
       return {
         a: common_vendor.t(common_vendor.unref(memberStore).profile),
-        b: common_vendor.o(($event) => common_vendor.unref(memberStore).setProfile("hahah")),
+        b: common_vendor.o(($event) => common_vendor.unref(memberStore).setProfile({
+          name: "123",
+          token: "1323"
+        })),
         c: common_vendor.o(($event) => common_vendor.unref(memberStore).clearProfile()),
         d: common_vendor.o(($event) => request())
       };

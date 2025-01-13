@@ -15,7 +15,10 @@ const request = ()=>{
   <view class="my">
     <view>会员信息：{{ memberStore.profile }}</view>
     <button
-      @tap="memberStore.setProfile('hahah')"
+      @tap="memberStore.setProfile({
+        name:'123',
+        token:'1323'
+      })"
       size="mini"
       plain
       type="primary"
