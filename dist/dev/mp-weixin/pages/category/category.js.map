@@ -1,1 +1,0 @@
-{"version":3,"file":"category.js","sources":["../../../../../uniPage:/cGFnZXMvY2F0ZWdvcnkvY2F0ZWdvcnkudnVl"],"sourcesContent":["import MiniProgramPage from '/Users/dzy/look-for-work/uniapp/git-uniapp/src/pages/category/category.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;;;;;AACA,GAAG,WAAW,eAAe;"}
