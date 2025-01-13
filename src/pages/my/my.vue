@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { useMemberStore } from "@/stores";
+import { http } from "@/utils/http";
 const memberStore = useMemberStore();
 
-const request = ()=>{
-  uni.request({
+const request = async ()=>{
+  const res = await http<number>({
     method:'GET',
     url:'/home/banner', // 需要凭借完整地址
   })
+  // return res.data
+  console.log(res)
 }
 
 </script>
