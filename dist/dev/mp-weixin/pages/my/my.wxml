@@ -1,0 +1,1 @@
+<view class="my"><view>会员信息：{{a}}</view><button bindtap="{{b}}" size="mini" plain type="primary"> 保存用户信息 </button><button bindtap="{{c}}" size="mini" plain type="warn">清理用户信息</button></view>

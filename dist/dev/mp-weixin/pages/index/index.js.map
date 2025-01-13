@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../../../../uniPage:/cGFnZXMvaW5kZXgvaW5kZXgudnVl"],"sourcesContent":["import MiniProgramPage from '/Users/dzy/look-for-work/uniapp/my-project/src/pages/index/index.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;AACA,GAAG,WAAW,eAAe;"}
