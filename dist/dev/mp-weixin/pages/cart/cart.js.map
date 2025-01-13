@@ -1,1 +1,0 @@
-{"version":3,"file":"cart.js","sources":["../../../../../uniPage:/cGFnZXMvY2FydC9jYXJ0LnZ1ZQ"],"sourcesContent":["import MiniProgramPage from '/Users/dzy/look-for-work/uniapp/git-uniapp/src/pages/cart/cart.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;;;;;AACA,GAAG,WAAW,eAAe;"}
