@@ -6,7 +6,8 @@ import cutomNavbar  from './components/cutomNavbar.vue';
 <template>
   <!-- 导航栏 搜索栏 -->
   <cutomNavbar/>
-  <view class="index">首页内容</view>
+  <txSwiper></txSwiper>
+  <view class="index">首页内</view>
 </template>
 
 <style lang="scss">
