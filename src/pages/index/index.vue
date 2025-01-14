@@ -48,16 +48,33 @@ const guessref = ref<guessInterface>() // 需要定义组件的实例类型
 //滚动触底
 const scrolltolower = ()=>{
   // 调用子组件方法，继续获取数据
-  console.log('123')
   guessref.value?.getMoreData()
 
+}
+const refresherTriggered = ref(false)
+// 下拉刷新触发
+const refresh = async()=>{
+  refresherTriggered.value = true
+  // 重新加载一遍页面
+  // 把数据都清除，重新加载
+  // await getHomeBanner();
+  // await getClassify();
+  // await getHotData();
+  await Promise.all([getHomeBanner(),getClassify(), getHotData()])
+  refresherTriggered.value = false
+  console.log('refresherTriggered',refresherTriggered)
+
+}
+//下拉刷新复位
+const refresherRestore = ()=>{
+  console.log('refresherRestore')
 }
 </script>
 
 <template>
   <!-- 导航栏 搜索栏 -->
   <cutomNavbar />
-  <scroll-view @scrolltolower="scrolltolower" scroll-y class="scroll-view" >
+  <scroll-view refresher-enabled refresher-triggered="refresherTriggered" @refresherrestore="refresherRestore" @refresherrefresh="refresh" @scrolltolower="scrolltolower" scroll-y class="scroll-view" >
     <txSwiper :list="bannerList"></txSwiper>
     <categoryPanel :list="classifyList"></categoryPanel>
     <HotPanel :list="hotList"></HotPanel>

@@ -1,6 +1,6 @@
 <template>
   <view class="caption">
-    <text class="text">猜你喜欢</text>
+    <text class="text">{{ guessLikeText }}</text>
   </view>
   <view class="guess">
     <navigator
@@ -24,7 +24,7 @@
 
     </navigator>
   </view>
-   <view class="loading-text"> 正在加载... </view>
+   <view class="loading-text">{{ loadText }}</view>
 </template>
 
 <script lang="ts" setup>
@@ -39,6 +39,8 @@ import { onLoad } from "@dcloudio/uni-app";
 // const props = defineProps<{
 //   list:guessLikeItems<GuessItem>[]
 // }>()
+const guessLikeText = ref('猜你喜欢')
+const loadText = ref('加载中...')
 const pageParams:Required<pageParams>= {
   page:1,
   pageSize:10
