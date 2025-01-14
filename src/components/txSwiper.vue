@@ -1,7 +1,7 @@
 <template>
   <view class="carousel">
     <swiper :autoplay="true" :circular="true" :current="0" @change="onchange">
-      <swiper-item>
+      <swiper-item v-for="item in list" :key="item.id">
         <navigator
           class="navigator"
           url="/pages/index/index"
@@ -10,46 +10,22 @@
         >
           <image
             class="image"
-            src="https://pcapi-xiaotuxian-front-devtest.itheima.net/miniapp/uploads/slider_1.jpg"
+            :src="item.imgUrl"
             mode="aspectFill"
           />
         </navigator>
       </swiper-item>
-      <swiper-item>
-        <navigator
-          url="/pages/index/index"
-          hover-class="none"
-          class="navigator"
-        >
-          <image
-            mode="aspectFill"
-            class="image"
-            src="https://pcapi-xiaotuxian-front-devtest.itheima.net/miniapp/uploads/slider_2.jpg"
-          ></image>
-        </navigator>
-      </swiper-item>
-      <swiper-item>
-        <navigator
-          url="/pages/index/index"
-          hover-class="none"
-          class="navigator"
-        >
-          <image
-            mode="aspectFill"
-            class="image"
-            src="https://pcapi-xiaotuxian-front-devtest.itheima.net/miniapp/uploads/slider_3.jpg"
-          ></image>
-        </navigator>
-      </swiper-item>
+      
     </swiper>
     <view class="indicator">
-      <text v-for="(item, index) in 3" :key="item" class="dot" :class="{active:index === activeIndex}"></text>
+      <text v-for="(item, index) in list" :key="item.id" class="dot" :class="{active:index === activeIndex}"></text>
     </view>
   </view>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref,defineProps } from "vue";
+import type { bannerItem } from '@/types/home'
 const activeIndex = ref(0)
 const onchange : UniHelper.SwiperOnChange= (val)=>{
   // const event = val.detail as {current:string}
@@ -57,6 +33,9 @@ const onchange : UniHelper.SwiperOnChange= (val)=>{
   activeIndex.value = val.detail.current
 
 }
+let props = defineProps<{
+  list:bannerItem[]
+}>()
 </script>
 
 <style lang="scss">
