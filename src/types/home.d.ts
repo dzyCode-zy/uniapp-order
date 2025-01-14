@@ -11,3 +11,22 @@ export type bannerItem = {
     type: number
 
 }
+
+// 定义分类接口的泛型
+
+export type classifyItems = {
+    id: string,
+    name: string,
+    icon: string
+
+
+}
+
+export type hotItems = {
+    alt: string,
+    id: string,
+    pictures: string[]
+    target: string
+    title: string
+    type: number
+}
