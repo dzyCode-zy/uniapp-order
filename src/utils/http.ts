@@ -57,7 +57,7 @@ uni.addInterceptor('uploadFile', httpInterceptor)
 interface data<T> {
     code: string,
     msg: string,
-    data: T
+    result: T  // 获取来的具体数据通过泛型定义，由接口数据决定是什么类型，前端再进行传递，参考home.ts定义的接口getHomeBannerApi 当前 result的类型应该是bannerItem，其他的接口可以类似定义
 }
 
 export const http = <T>(options: UniApp.RequestOptions) => {

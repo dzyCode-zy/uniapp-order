@@ -5,7 +5,9 @@
     "custom": {
       // 自动导入，在页面中不需要手动导入了
       // uni-ui 规则如下配置
-      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+      // components文件夹里的组件名称都以 tx 开通，后续使用时自动引入
+      "^tx(.*)": "@/components/tx$1.vue"
     }
   },
 
