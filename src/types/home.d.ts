@@ -1,3 +1,4 @@
+import type exp from "constants"
 
 // 类型说明文件，定义获取到的轮播图数据的类型
 export type bannerItem = {
@@ -30,3 +31,14 @@ export type hotItems = {
     title: string
     type: number
 }
+
+export type guessLikeItems<T> = {
+    counts: number
+    items: T[]
+    page: number
+    pageSize: number
+    pages: number
+}
+
+
+

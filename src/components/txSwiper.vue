@@ -28,8 +28,6 @@ import { ref,defineProps } from "vue";
 import type { bannerItem } from '@/types/home'
 const activeIndex = ref(0)
 const onchange : UniHelper.SwiperOnChange= (val)=>{
-  // const event = val.detail as {current:string}
-  console.log(val.detail.current)
   activeIndex.value = val.detail.current
 
 }
