@@ -3,8 +3,6 @@
 // 拦截uploadFile 文件上传
 
 import { useMemberStore } from "@/stores";
-import { rejects } from "assert";
-import { resolve } from "path";
 
 //TODO
 // 1.非 http 开头的请求需要需要拼接地址
