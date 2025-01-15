@@ -62,8 +62,8 @@ const refresh = async()=>{
   // await getHotData();
   await Promise.all([getHomeBanner(),getClassify(), getHotData()])
   refresherTriggered.value = false
-  guessref.value?.reset()
   console.log('refresherTriggered',refresherTriggered)
+
 
 }
 //下拉刷新复位
