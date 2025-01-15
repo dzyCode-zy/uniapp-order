@@ -62,6 +62,7 @@ const refresh = async()=>{
   // await getHotData();
   await Promise.all([getHomeBanner(),getClassify(), getHotData()])
   refresherTriggered.value = false
+  guessref.value?.reset()
   console.log('refresherTriggered',refresherTriggered)
 
 }
@@ -69,12 +70,14 @@ const refresh = async()=>{
 const refresherRestore = ()=>{
   console.log('refresherRestore')
 }
+
+
 </script>
 
 <template>
   <!-- 导航栏 搜索栏 -->
   <cutomNavbar />
-  <scroll-view refresher-enabled refresher-triggered="refresherTriggered" @refresherrestore="refresherRestore" @refresherrefresh="refresh" @scrolltolower="scrolltolower" scroll-y class="scroll-view" >
+  <scroll-view refresher-enabled :refresher-triggered="refresherTriggered" @refresherrestore="refresherRestore" @refresherrefresh="refresh" @scrolltolower="scrolltolower" scroll-y class="scroll-view" >
     <txSwiper :list="bannerList"></txSwiper>
     <categoryPanel :list="classifyList"></categoryPanel>
     <HotPanel :list="hotList"></HotPanel>
