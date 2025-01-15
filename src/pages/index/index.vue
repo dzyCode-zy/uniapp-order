@@ -62,6 +62,8 @@ const refresh = async()=>{
   // await getHotData();
   await Promise.all([getHomeBanner(),getClassify(), getHotData()])
   refresherTriggered.value = false
+  // 重置 txGuess组件的guessLikeList数据
+  guessref.value?.reset()
   console.log('refresherTriggered',refresherTriggered)
 
 
