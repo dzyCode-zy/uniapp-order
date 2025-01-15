@@ -1,88 +1,95 @@
 {
-  "easycom": {
-    // 是否开启自动扫面，判断 components里有没有 uni组件，有会自动添加
-    "autoscan": true,
-    "custom": {
-      // 自动导入，在页面中不需要手动导入了
-      // uni-ui 规则如下配置
-      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
-      // components文件夹里的组件名称都以 tx 开通，后续使用时自动引入
-      "^tx(.*)": "@/components/tx$1.vue"
-    }
-  },
-
-  "pages": [
-    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-    {
-      "path": "pages/index/index",
-      "style": {
-        "navigationStyle": "custom",
-        "navigationBarTitleText": "首页",
-        "navigationBarTextStyle": "white"
-      }
-    },
-    {
-      "path": "pages/my/my",
-      "style": {
-        "navigationBarTitleText": "我的"
-      }
-    },
-    {
-      "path": "pages/cart/cart",
-      "style": {
-        "navigationBarTitleText": "购物车"
-      }
-    },
-    {
-      "path": "pages/category/category",
-      "style": {
-        "navigationBarTitleText": "分类"
-      }
-    },
-    {
-      "path": "pages/login/login",
-      "style": {
-        "navigationBarTitleText": "登录"
-      }
-    }
-  ],
-  "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
-  },
-  // 设置 TabBar
-  "tabBar": {
-    "color": "#333",
-    "selectedColor": "#6cc6c6",
-    "backgroundColor": "#fff",
-    "borderStyle": "white",
-    "list": [
-      {
-        "text": "首页",
-        "pagePath": "pages/index/index",
-        "iconPath": "static/tabs/home_default.png",
-        "selectedIconPath": "static/tabs/home_selected.png"
-      },
-      {
-        "text": "分类",
-        "pagePath": "pages/category/category",
-        "iconPath": "static/tabs/category_default.png",
-        "selectedIconPath": "static/tabs/category_selected.png"
-      },
-      {
-        "text": "购物车",
-        "pagePath": "pages/cart/cart",
-        "iconPath": "static/tabs/cart_default.png",
-        "selectedIconPath": "static/tabs/cart_selected.png"
-      },
-      {
-        "text": "我的",
-        "pagePath": "pages/my/my",
-        "iconPath": "static/tabs/user_default.png",
-        "selectedIconPath": "static/tabs/user_selected.png"
-      }
-    ]
-  }
+	"easycom": {
+		// 是否开启自动扫面，判断 components里有没有 uni组件，有会自动添加
+		"autoscan": true,
+		"custom": {
+			// 自动导入，在页面中不需要手动导入了
+			// uni-ui 规则如下配置
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+			// components文件夹里的组件名称都以 tx 开通，后续使用时自动引入
+			"^tx(.*)": "@/components/tx$1.vue"
+		}
+	},
+	"pages": [
+		//配置和定义应用中的页面路径及其样式。它是 UniApp 应用的核心配置之一，用于告诉框架应用包含哪些页面，并定义每个页面的相关属性和样式。
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/hot/hot",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "热门推荐"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "首页",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	// 设置 TabBar
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#6cc6c6",
+		"backgroundColor": "#fff",
+		"borderStyle": "white",
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabs/home_default.png",
+				"selectedIconPath": "static/tabs/home_selected.png"
+			},
+			{
+				"text": "分类",
+				"pagePath": "pages/category/category",
+				"iconPath": "static/tabs/category_default.png",
+				"selectedIconPath": "static/tabs/category_selected.png"
+			},
+			{
+				"text": "购物车",
+				"pagePath": "pages/cart/cart",
+				"iconPath": "static/tabs/cart_default.png",
+				"selectedIconPath": "static/tabs/cart_selected.png"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/my/my",
+				"iconPath": "static/tabs/user_default.png",
+				"selectedIconPath": "static/tabs/user_selected.png"
+			}
+		]
+	}
 }
