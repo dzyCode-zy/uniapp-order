@@ -62,6 +62,10 @@ const getGuessLike = async () => {
   }
 
 };
+const reset = ()=>{
+  pageParams.page = 1
+  guessLikeList.value = []
+}
 
 // 组件挂载时调用方法
 onMounted(()=>{
@@ -69,7 +73,8 @@ onMounted(()=>{
 })
 // 暴露方法供外部使用
 defineExpose({
-  getMoreData:getGuessLike
+  getMoreData:getGuessLike,
+  reset:reset
 })
 </script>
 
